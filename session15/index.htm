@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>session15</title>
+
+	<style>
+	button 
+		{position:absolute;
+		display: block;
+		}
+
+	</style>
+
+
+	<script>
+	
+		//random position
+		var b = document.querySelector("button");
+		b.addEventListener("click",change);
+
+		function change()
+	{
+    var i = Math.floor(Math.random()*500)+1;
+    var j = Math.floor(Math.random()*500)+1;
+    b.style.left = i+"px";
+    b.style.top = j+"px";
+	}
+
+
+	function changeText () 
+	{
+  if (this.innerText == "Click Me") { // check if text inside is "Click Me"
+    this.innerText == "Move Me";    // If so, change to "Move Me"
+  } 
+  else {
+    this.innerText == "Move Me";
+  		}
+}
+
+	</script>
+  </head>
+
+  <body>
+	
+	<p>
+
+		<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" onclick="change()" onclick="changeText()">
+			Click Me
+		  </button>
+	</p>
+
+
+
+
+
+
+
+  </body>
+</html>
