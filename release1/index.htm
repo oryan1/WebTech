@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 7px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 10px;
+  text-align: center;
+  background: white;
+}
+
+.header h1 {
+  font-size: 50px; 
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: grey;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: pink;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Change color on hover */
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content 
+{
+  display: block;
+}
+
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%; 
+  text-align: center;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.box {
+    display: flex; align-items: left;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/*Centering img */
+#center { text-align: center;}
+
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Best Boston Eats</h1>
+</div>
+
+<ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#aboutme">About Me</a></li>
+    <li><a href="#contactme">Contact Me</a></li>
+    <li><a href="#top5">Top 5 Ranking</a></li>
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">Neighborhoods</a>
+      <div class="dropdown-content">
+        <a href="#">North End</a>
+        <a href="#">Seaport</a>
+        <a href="#">Chinatown</a>
+        <a href="#">Back Bay</a>
+        <a href="#">Fenway</a>
+        <a href="#">Allston</a>
+      </div>
+    </li>
+  </ul>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Welcome!</h2>
+      
+    
+      <div id="center"> <img src="https://cdn.pixabay.com/photo/2016/08/30/17/12/boston-1631460_1280.jpg" width="200px" height="200px"  > </div>
+      <p>Welcome to <b>Best Boston Eats</b> a Boston traveler's guide to the best eats in the city!</p>
+      <p>You will find my personal recommendations broken up by neighborhood. Additionally, I have a list of the 5 Best Boston Eats, which includes all the neighborhoods. </p>
+    </div>
+  
+  </div>
+
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About The Author</h2>
+      <div class="center">
+        <img src="photoofme.jpg" width="200px" height="200px">
+        <span style="align-items: center;"><p>My name is Olivia and I am a student living in Boston! Originally from Columbus, Ohio. Please feel free to reach out on my <a href="https://besteatsboston.com/contactme"><b>Contact Me</b></a> page for any questions, recommendations, or comments. 
+        </p>
+      </span>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Sign Up For Personalized Recommendations</h3>
+      <p>Some text..</p>
+    </div>
+
+
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+
+</body>
+</html>
