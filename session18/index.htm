@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+	<title>Drawing on a canvas </title>
+<style>
+	h1 {text-align: center; font-family: 'Courier New', Courier, monospace; font-size: 36pt; color: orchid;}
+</style>
+
+</head>
+<body>
+	<h1>Drawing on a Canvas</h1>
+
+
+<canvas id="Canvas1" width="1000" height="500"
+style="border:1px solid black;">
+
+<script>
+
+var canvas = document.getElementById("Canvas1");
+var ctx = canvas.getContext("2d");
+
+
+// create gradient
+var grd = ctx.createLinearGradient(0, 0, 450, 0);
+grd.addColorStop(0, "pink");
+grd.addColorStop(1, "white");
+
+// fill with gradient
+ctx.fillStyle = grd;
+ctx.fillRect(0, 0, 500, 1000);
+
+//circle
+ctx.beginPath();
+ctx.arc(750, 100, 80, 0, 2 * Math.PI);
+ctx.stroke();
+
+//text
+ctx.font="30px Courier";
+ctx.fillStyle = "orange";
+ctx.textAlign = "center";
+ctx.fillText("Olivia Ryan", canvas.width/2, canvas.height/2); 	
+</script>	
+
+</body>
+</html>
