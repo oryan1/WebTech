@@ -4,18 +4,61 @@
 
   <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
-	<title>Page title goes here</title>
+	<title>Session22</title>
 
-	<style>
-	/* Your styles go here */
+	<!-- CSS Code: Place this code in the document's head (between the 'head' tags) -->
+<style>
+	table.GeneratedTable {
+	  width: 100%;
+	  background-color: #000000;
+	border-collapse: separate;
+	  border-width: 2px;
+	  border-color: #e392fe;
+	  border-style: solid;
+	  color: #ffffff;
+	}
+	
+	table.GeneratedTable td, table.GeneratedTable th {
+	  border-width: 2px;
+	  border-color: #e392fe;
+	  border-style: solid;
+	  padding: 5px;
+	}
+	
+	table.GeneratedTable thead {
+	  background-color: #f1c9fe;
+	}
 	</style>
 	
-	<script src="https://code.jquery.com/jquery.min.js"></script>
+	
+	<script src="https://code.jquery.com/jquery.min.js">
+	</script>
+
+
+
+
 	<script>
 	$(function(){
-	   // jQuery methods go here...
+	 // jQuery methods go here...
 
+	 //show/hide
+	$(document).ready(function(){
+	$("#hide").click(function(){
+	  $("#odd1").hide(); $("#odd2").hide();
 	});
+	$("#show").click(function(){
+	  $("#odd1").show(); $("#odd2").show();
+	});
+  	});
+	});
+
+	//rows fade
+  	//$("td").click(function(){
+    //$("td").fadeOut("slow");
+  //});
+//});
+
+
 	/* Your additional JavaScript goes here */
 	</script>
   </head>
@@ -23,7 +66,30 @@
   <body>
 	<!-- Your HTML goes here -->
 
-	<p><button onclick="change_text()">Click Me</button></p>
+	<table class="GeneratedTable">
+		<tbody>
+		  <tr>
+			<td id = "odd1">1</td>
+		  </tr>
+		  <tr>
+			<td>2</td>
+		  </tr>
+		  <tr>
+			<td id = "odd2">3</td>
+		  </tr>
+		  <tr>
+			<td>4</td>
+		  </tr>
+		</tbody>
+	  </table>
+
+	  <p>If you click on the "Hide" button, I will disappear.</p>
+	<button id="hide">HideOdd</button>
+	<button id="show">ShowAll</button>
+
+
+	  
+	  
 
   </body>
 </html>
