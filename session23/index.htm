@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+  <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Session23</title>
+
+	<!-- CSS Code: Place this code in the document's head (between the 'head' tags) -->
+<style>
+
+.yellow {
+  color: yellow;
+}
+	#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: violet;
+  border: solid 1px magenta;
+}
+
+	#panel {
+  padding: 30px;
+  display: none;
+}
+
+	table.GeneratedTable {
+	  width: 100%;
+	  background-color: #000000;
+	border-collapse: separate;
+	  border-width: 2px;
+	  border-color: #e392fe;
+	  border-style: solid;
+	  color: #ffffff;
+	}
+	
+	table.GeneratedTable td, table.GeneratedTable th {
+	  border-width: 2px;
+	  border-color: #e392fe;
+	  border-style: solid;
+	  padding: 5px;
+	}
+	
+	table.GeneratedTable thead {
+	  background-color: #f1c9fe;
+	}
+	</style>
+	
+	
+	<script src="https://code.jquery.com/jquery.min.js">
+	</script>
+
+	<script>
+	/* Your additional JavaScript goes here */
+		
+	$(document).ready(function(){
+ 	 $("#flip").click(function(){
+    $("#panel").slideDown("slow");
+  	});
+	  $("#addtext").click(function(){
+    $("p").append(" <b>Text Added!</b>");
+  	});
+
+	$("#remove").click(function(){
+    $("#div1").remove();
+  });
+
+  $("#toggle").click(function(){
+    $("#flip").toggleClass("yellow");
+  });
+
+
+	});
+
+</script>
+  </head>
+
+  <body>
+	<!-- Your HTML goes here -->
+	<div id="flip">Click to slide down panel</div>
+	<div id="panel">The panel slid down!</div>
+
+
+	<table class="GeneratedTable">
+		<tbody>
+		  <tr>
+			<td id = "odd1">1</td>
+		  </tr>
+		  <tr>
+			<td>2</td>
+		  </tr>
+		  <tr>
+			<td id = "odd2">3</td>
+		  </tr>
+		  <tr>
+			<td>4</td>
+		  </tr>
+		</tbody>
+	  </table>
+
+	<div id="div1" style="height:100px;width:300px;border:1px solid black;background-color:peachpuff;">
+	
+
+		<p>Watch this disappear. </p>
+		</div>
+
+
+		<br>
+		
+
+	  <p>Add text by clicking the button below!</p>
+	  <button id="addtext">Add Text</button>
+
+	  <button id="remove">Remove</button>
+
+	  <button id="toggle">Toggle class</button>
+	  
+
+  </body>
+</html>
