@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+	<title>Session19</title>
+<style>
+	h1 {text-align: center; font-family: 'Courier New', Courier, monospace; font-size: 36pt; color: orchid;}
+</style>
+
+</head>
+<body>
+	<h1>Date of Birth Form & Cookies</h1>
+
+
+    <form action="/action_page.php" method="GET">
+        <label for="year">Year: </label>
+        <input type="text" id="year" name="year"><br><br>
+        <label for="month">Month: </label>
+        <input type="text" id="month" name="month"><br><br>
+        <label for="day">Day: </label>
+        <input type="text" id="day" name="day"><br><br>
+        <input type="button" value="Submit" onClick="pr()">
+        <label for="result">Your D.O.B.: </label>
+        <span id="result"></span>
+      </form>
+
+
+       
+      <script>
+  //print
+        function pr() {
+          document.getElementById("result").innerHTML = document.getElementById('year').value + " " + document.getElementById('month').value + " " + document.getElementById('day').value;
+        }
+      </script>
+      
+      <p>Click on the submit button to submit your date of birth.</p>
+
+      <br><br><br>
+     <p> Click <a href="cookiescheck.htm">here</a> to check your Cookies </p>
+      
+      
+</body>
+</html>
